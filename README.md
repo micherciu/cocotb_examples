@@ -19,15 +19,21 @@
 
 ### 2. Using Makefile:  
 * Compilation using makefile
-    - Makefile
-    - HDL description file (Verilog/VHDL)
-    - Python test bench file
+    * define/change/write
+        - Makefile
+        - HDL description file (Verilog/VHDL)
+        - Test bench file (python)
+    * command
+        `make`
 
 ### 3. Using Runner:  
 * Compilation using python
-    - Python specific file: (as a runner)
-    - HDL description file (Verilog/VHDL)
-    - Python test bench file
+    * define/change/write
+        - Runner (python specific file)
+        - HDL description file (Verilog/VHDL)
+        - Test bench file (python)
+    * command:
+        `python runner_file_name.py`
 
 ### 4. Verilog Modules:
 *  Quick simple
