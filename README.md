@@ -45,9 +45,10 @@ graph TD;
     cocotb_examples-->.git;
     cocotb_examples-->README.md;
     cocotb_examples-->modules;
-    modules-->Quick_simple
+    modules-->quick_simple
     cocotb_examples-->toplevel;
     toplevel-->makefile;
+    makefile-->quick_simple
     toplevel-->runner;
 ```
 
