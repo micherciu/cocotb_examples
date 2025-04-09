@@ -45,4 +45,10 @@ graph TD;
     toplevel-->runner;
 ```
 
+### 6. References:
+* https://www.cocotb.org/
+* https://www.python.org/
+* https://pypi.org/project/pip/
+* https://www.chipverify.com/tutorials/verilog
+* https://nandland.com/
 
