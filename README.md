@@ -56,6 +56,7 @@ graph TD;
 
 ### 6. References:
 * https://www.cocotb.org/
+* https://github.com/cocotb/cocotb/tree/master/examples
 * https://www.python.org/
 * https://pypi.org/project/pip/
 * https://www.chipverify.com/tutorials/verilog
