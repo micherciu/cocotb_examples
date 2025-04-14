@@ -29,6 +29,7 @@
         python_tb-->quick_start_tb;
         python_tb-->AND_gate_tb;
         python_tb-->OR_gate_tb;
+        python_tb-->NOT_gate_tb;
     ```
     * command
         `make`
@@ -47,6 +48,7 @@
     *  [Quick start](./toplevel/makefile/quick_start/README.md)
     *  [AND GATE example](./toplevel/makefile/and_gate/README.md)
     *  [OR GATE example](./toplevel/makefile/or_gate/README.md)
+    *  [NOT GATE example](./toplevel/makefile/not_gate/README.md)
 
 ```mermaid
 graph TD;
@@ -54,6 +56,7 @@ graph TD;
     verilog_examples-->quick_start;
     verilog_examples-->AND_gate;
     verilog_examples-->OR_gate;
+    verilog_examples-->NOT_gate;
 ```
 
 
