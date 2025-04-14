@@ -1,4 +1,4 @@
-# adder_tb.py
+# not_gate_tb.py
 
 import cocotb
 from cocotb.triggers import FallingEdge, Timer

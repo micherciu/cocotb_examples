@@ -1,4 +1,4 @@
-module not_gate_fm(clk,a,b,y);
+module not_gate_fm(clk,a,y);
     input clk;
     input a;
     output y;
