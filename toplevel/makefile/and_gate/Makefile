@@ -30,3 +30,6 @@ COCOTB_TEST_MODULES = and_gate_tb
 # include cocotb's make rules to take care of the simulator setup
 #include $(sh cocotb-config --makefiles)/Makefile.sim
 include $(shell cocotb-config --makefiles)/Makefile.sim
+
+cleanall:
+	rm -r results.xml __pycache__ sim_build
