@@ -17,16 +17,23 @@
 *  Check the installation
 `cocotb-config --version`
 
-### 2. Using Makefile:  
+### 2. TEST BENCH
+### A. Using Makefile:
 * Compilation using makefile
     * define/change/write
         - Makefile
-        - HDL description file (Verilog/VHDL)
         - Test bench file (python)
+    ```mermaid
+    graph TD;
+        makefile-->python_tb;
+        python_tb-->quick_start_tb;
+        python_tb-->AND_gate_tb;
+        python_tb-->OR_gate_tb;
+    ```
     * command
         `make`
 
-### 3. Using Runner:  
+### B. Using Runner:  
 * Compilation using python
     * define/change/write
         - Runner (python specific file)
@@ -35,8 +42,20 @@
     * command:
         `python runner_file_name.py`
 
-### 4. Verilog Modules:
-*  Quick simple
+### 4. Modules: Verilog examples:
+* HDL description file (Verilog/VHDL)
+    *  [Quick start](./toplevel/makefile/quick_start/README.md)
+    *  [AND GATE example](./toplevel/makefile/and_gate/README.md)
+    *  [OR GATE example](./toplevel/makefile/or_gate/README.md)
+
+```mermaid
+graph TD;
+    modules-->verilog_examples;
+    verilog_examples-->quick_start;
+    verilog_examples-->AND_gate;
+    verilog_examples-->OR_gate;
+```
+
 
 ### 5. Folder Structure:
 
@@ -45,18 +64,17 @@ graph TD;
     cocotb_examples-->.git;
     cocotb_examples-->README.md;
     cocotb_examples-->modules;
-    modules-->quick_start;
-    modules-->and_gate;
+    modules-->verilog_examples;
     cocotb_examples-->toplevel;
     toplevel-->makefile;
-    makefile-->quick_start
-    makefile-->and_gate;
+    makefile-->python_tb;
     toplevel-->runner;
 ```
 
 ### 6. References:
 * https://www.cocotb.org/
 * https://github.com/cocotb/cocotb/tree/master/examples
+* https://circuitfever.com/
 * https://www.python.org/
 * https://pypi.org/project/pip/
 * https://www.chipverify.com/tutorials/verilog
