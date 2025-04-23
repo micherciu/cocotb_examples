@@ -23,18 +23,34 @@
     * define/change/write
         - Makefile
         - Test bench file (python)
-    ```mermaid
-    graph TD;
-        makefile-->python_tb;
-        python_tb-->quick_start_tb;
-        python_tb-->AND_gate_tb;
-        python_tb-->OR_gate_tb;
-        python_tb-->NOT_gate_tb;
-        python_tb-->NAND_gate_tb;
-        python_tb-->NOR_gate_tb;
-        python_tb-->EX-OR_gate_tb;
-        python_tb-->EX-NOR_gate_tb;
-    ```
+```mermaid
+flowchart TB;
+    subgraph simple[Simple Example]
+    direction LR;
+        quick_start[Quick start example];
+    end;
+    subgraph basic[Basic Gates]
+    direction LR;
+        and_gate[AND GATE];
+        or_gate[OR GATE];
+        not_gate[NOT GATE];
+    end;
+    subgraph universal[Universal Gates]
+    direction LR;
+        nand_gate[NAND GATE];
+        nor_gate[NOR GATE];
+    end;
+    subgraph other[Other Logic Gates]
+    direction LR;
+        exor_gate[EX-OR GATE];
+        exnor_gate[EX-NOR GATE];
+    end;
+    
+    makefile_tb-->simple;
+    makefile_tb-->basic;
+    makefile_tb-->universal;
+    makefile_tb-->other;
+```
     * command
         `make`
 
@@ -53,18 +69,37 @@
     *  [AND GATE example](./toplevel/makefile/and_gate/README.md)
     *  [OR GATE example](./toplevel/makefile/or_gate/README.md)
     *  [NOT GATE example](./toplevel/makefile/not_gate/README.md)
+    *  [NAND GATE example](./toplevel/makefile/nand_gate/README.md)
+    *  [NOR GATE example](./toplevel/makefile/nor_gate/README.md)
+    *  [EXOR GATE example](./toplevel/makefile/exor_gate/README.md)
+    *  [EXNOR GATE example](./toplevel/makefile/exnor_gate/README.md)
 
 ```mermaid
-graph TD;
-    modules-->verilog_examples;
-    verilog_examples-->quick_start;
-    verilog_examples-->AND_gate;
-    verilog_examples-->OR_gate;
-    verilog_examples-->NOT_gate;
-    verilog_examples-->NAND_gate;
-    verilog_examples-->NOR_gate;
-    verilog_examples-->EX-OR_gate;
-    verilog_examples-->EX-NOR_gate;
+flowchart TB;
+    subgraph simple[Simple Example]
+        direction LR;
+            quick_start[Quick start example];
+        end;
+    subgraph basic[Basic Gates]
+        direction LR;
+            and_gate[AND GATE];
+            or_gate[OR GATE];
+            not_gate[NOT GATE];
+    end;
+    subgraph universal[Universal Gates]
+        direction LR;
+            nand_gate[NAND GATE];
+            nor_gate[NOR GATE];
+    end;
+    subgraph other[Other Logic Gates]
+        direction LR;
+            exor_gate[EX-OR GATE];
+            exnor_gate[EX-NOR GATE];
+    end;     
+    modules-->simple;
+    modules-->basic;
+    modules-->universal;
+    modules-->other;
 ```
 
 
@@ -75,11 +110,9 @@ graph TD;
     cocotb_examples-->.git;
     cocotb_examples-->README.md;
     cocotb_examples-->modules;
-    modules-->verilog_examples;
-    cocotb_examples-->toplevel;
-    toplevel-->makefile;
-    makefile-->python_tb;
-    toplevel-->runner;
+    cocotb_examples-->testbench;
+    testbench-->makefile;
+    testbench-->runner;
 ```
 
 ### 6. References:
