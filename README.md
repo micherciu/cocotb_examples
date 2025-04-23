@@ -32,6 +32,8 @@
         python_tb-->NOT_gate_tb;
         python_tb-->NAND_gate_tb;
         python_tb-->NOR_gate_tb;
+        python_tb-->EX-OR_gate_tb;
+        python_tb-->EX-NOR_gate_tb;
     ```
     * command
         `make`
@@ -61,6 +63,8 @@ graph TD;
     verilog_examples-->NOT_gate;
     verilog_examples-->NAND_gate;
     verilog_examples-->NOR_gate;
+    verilog_examples-->EX-OR_gate;
+    verilog_examples-->EX-NOR_gate;
 ```
 
 
