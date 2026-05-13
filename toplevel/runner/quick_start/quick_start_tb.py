@@ -28,4 +28,14 @@ async def quick_start(dut):
 #    await FallingEdge(dut.clk)  # wait for falling edge/"negedge"
 
     dut._log.info("my_signal_1 is %s", dut.my_signal_1.value)
+    dut.my_signal_1.value = 0
+    await Timer(5, unit="ns")  # wait a bit
+    dut._log.info("my_signal_1 is %s", dut.my_signal_1.value)
     dut.my_signal_1.value = 1
+    await Timer(5, unit="ns")  # wait a bit
+    dut._log.info("my_signal_2 is %s", dut.my_signal_2.value)
+    dut.my_signal_2.value = 1
+    await Timer(5, unit="ns")  # wait a bit
+    dut._log.info("my_signal_2 is %s", dut.my_signal_2.value)
+    dut.my_signal_2.value = 0
+    await Timer(5, unit="ns")  # wait a bit

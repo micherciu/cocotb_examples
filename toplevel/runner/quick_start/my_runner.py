@@ -16,13 +16,17 @@ def my_runner():
 
     runner = get_runner(sim)
     runner.build(
-        sources     =sources,
+        sources     = sources,
         hdl_toplevel="quick_start",
-        waves       = True
+        waves       = True,
+        always = True,
     )
 
-    runner.test(hdl_toplevel="quick_start", test_module="quick_start_tb,")
-
+    runner.test(
+        hdl_toplevel="quick_start",
+        test_module="quick_start_tb",
+        waves=True
+    )
 
 if __name__ == "__main__":
     my_runner()
