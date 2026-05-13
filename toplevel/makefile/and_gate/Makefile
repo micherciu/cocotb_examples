@@ -4,9 +4,12 @@
 # Makefile
 
 # defaults
-SIM ?= icarus
-WAVES=1
+SIM ?= modelsim
 TOPLEVEL_LANG ?= verilog
+ARCH ?= i686
+TOP_LEVEL ?= verilog
+WAVES ?= 1
+#GUI ?= 1
 
 # use VERILOG_SOURCES for Verilog files
 VERILOG_SOURCES += ${PWD}/../../../modules/and_gate_fm.v
