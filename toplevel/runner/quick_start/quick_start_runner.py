@@ -1,14 +1,14 @@
 # This file is public domain, it can be freely copied without restrictions.
 # SPDX-License-Identifier: CC0-1.0
 
-# my_runner.py
+# quick_start.py
 
 import os
 from pathlib import Path
 from cocotb_tools.runner import get_runner
 #from pycocotools.coco import get_runner
 
-def my_runner():
+def quick_start():
     sim = os.getenv("SIM", "icarus")
     proj_path = Path(__file__).resolve().parent
 
@@ -29,4 +29,4 @@ def my_runner():
     )
 
 if __name__ == "__main__":
-    my_runner()
+    quick_start()

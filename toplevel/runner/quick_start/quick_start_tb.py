@@ -11,7 +11,7 @@ from cocotb.triggers import FallingEdge
 async def generate_clock(dut):
     """Generate clock pulses."""
 
-    for cycle in range(10):
+    while True:
         dut.clk.value = 0
         await Timer(1, unit="ns")
         dut.clk.value = 1
@@ -22,7 +22,7 @@ async def generate_clock(dut):
 async def quick_start(dut):
     """Try accessing the design."""
 
-    await cocotb.start_soon(generate_clock(dut))  # run the clock "in the background"
+    cocotb.start_soon(generate_clock(dut))  # run the clock "in the background"
 
     await Timer(5, unit="ns")  # wait a bit
 #    await FallingEdge(dut.clk)  # wait for falling edge/"negedge"
